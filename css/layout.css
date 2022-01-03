@@ -1,0 +1,112 @@
+body {
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.container {
+  background: url("../images/bg-pattern-mobile.svg");
+  background-size: 70%;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: top center;
+  margin: auto;
+  border-radius: 1.5rem;
+  position: relative;
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.container .image-mobile {
+  display: block;
+  margin: auto;
+  width: 70%;
+  transform: translateY(-6.5rem);
+}
+.container .image-desktop {
+  display: none;
+}
+.container .image-box {
+  display: none;
+}
+
+.accordion {
+  background-color: white;
+  cursor: pointer;
+  width: 90%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid hsl(240, 5%, 91%);
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  transition: max-height 0.2s ease-out;
+  text-align: left;
+}
+
+.accordion:after {
+  content: url("../images/icon-arrow-down.svg");
+  float: right;
+}
+
+.active:after {
+  content: url("../images/icon-arrow-down.svg");
+  transform: scaleY(-1);
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 1100px) {
+  .container {
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position-x: -30rem;
+    background-position-y: -14rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-right: 9rem;
+    margin-left: 9rem;
+  }
+
+  .container .image-mobile {
+    display: none;
+    
+  }
+  .container .image-desktop {
+    display: block;
+    margin-top: 15%;
+    width: 90%;
+    position: left;
+    margin-bottom: 4rem;
+    transform:translateX(-8rem );
+    z-index: 2;
+  }
+  .container .image-box {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 17%;
+    top: 42%;
+    left: -9%;
+  }
+
+  div{
+    margin-bottom: 0;
+    overflow: hidden;
+    position: relative;
+  }
+}
